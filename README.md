@@ -8,8 +8,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
 [![Recharts](https://img.shields.io/badge/Recharts-2-22B5BF?logo=chartdotjs)](https://recharts.org)
 [![Deploy on Vercel](https://img.shields.io/badge/Deploy%20on-Vercel-000?logo=vercel)](https://vercel.com)
-
-> A mission‑control‑style operations console for aerospace telemetry, imagery, and orbital data.  
+  
 > Real‑time & historical visualizations with interactive 3D globes, time‑series charts, and resilient fallbacks for degraded upstream feeds.
 
 ---
