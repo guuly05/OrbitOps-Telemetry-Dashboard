@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  background: #000000;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #d1fae5;
+  background:
+    linear-gradient(rgba(0, 255, 102, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 102, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 82% 8%, rgba(0, 255, 102, 0.08), transparent 24rem),
+    #000000;
+  background-size: 44px 44px, 44px 44px, auto, auto;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.45);
+  border: 1px solid rgba(0, 255, 102, 0.18);
+}
+
+.matrix-panel {
+  position: relative;
+  border: 1px solid rgba(6, 95, 70, 0.65);
+  background: rgba(0, 0, 0, 0.46);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(52, 211, 153, 0.12), 0 0 40px rgba(0, 255, 102, 0.055);
+}
+
+.matrix-panel::before,
+.matrix-panel::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.matrix-panel::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #00ff66;
+  border-left: 2px solid #00ff66;
+}
+
+.matrix-panel::after {
+  right: -1px;
+  bottom: -1px;
+  border-right: 2px solid #00ff66;
+  border-bottom: 2px solid #00ff66;
+}
+
+.scanline {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.18;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(0, 255, 102, 0.13) 4px
+  );
+  mix-blend-mode: screen;
+}
+
+.scan-sweep {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 140px;
+  z-index: 49;
+  background: linear-gradient(180deg, transparent, rgba(0, 255, 102, 0.08), transparent);
+  animation: scan 8s linear infinite;
+}
+
+.cyber-button {
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.recharts-default-tooltip {
+  border: 1px solid rgba(16, 185, 129, 0.55) !important;
+  background: rgba(0, 0, 0, 0.92) !important;
+  color: #d1fae5 !important;
+}
